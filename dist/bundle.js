@@ -15,7 +15,7 @@
   \*********************/
 /***/ (() => {
 
-eval("const generatedName = document.querySelector('.name');\nconst generatedLastName = document.querySelector('.last-name');\nconst generatedEmail = document.querySelector('.email');\nconst genratedLocation = document.querySelector('.location');\nconst generatedPhone = document.querySelector('.number-phone');\nconst url = 'https://randomuser.me/api/';\nfetch(url)\n    .then(response => response.json())\n    .then(data => {\n    console.log(data);\n});\n\n\n//# sourceURL=webpack://random-person/./src/main.ts?");
+eval("const generatedName = document.querySelector('.name');\nconst generatedLastName = document.querySelector('.last-name');\nconst generatedEmail = document.querySelector('.email');\nconst genratedLocation = document.querySelector('.location');\nconst generatedPhone = document.querySelector('.number-phone');\n// random person api\nconst url = 'https://randomuser.me/api/';\nfunction getRandomPerson(url) {\n    fetch(url)\n        .then(response => response.json())\n        .then(data => {\n        // destructuring data\n        const { name, lastname, email, location, phone } = data.results[0];\n        generatedName.textContent = name.first;\n    });\n}\ngetRandomPerson(url);\n\n\n//# sourceURL=webpack://random-person/./src/main.ts?");
 
 /***/ })
 
