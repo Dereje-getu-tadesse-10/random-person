@@ -3,7 +3,7 @@ const generatedLastName = document.querySelector<HTMLParagraphElement>('.last-na
 const generatedEmail = document.querySelector<HTMLParagraphElement>('.email');
 const genratedLocation = document.querySelector<HTMLParagraphElement>('.location');
 const generatedPhone = document.querySelector<HTMLParagraphElement>('.number-phone');
-
+const generatePerson = document.querySelector<HTMLButtonElement>('.btn-generate');
 // random person api
 const url : string = 'https://randomuser.me/api/';
 
@@ -14,7 +14,6 @@ function getRandomPerson(url : string) {
 
         // destructuring data
         const {name, lastname, email, location, phone} = data.results[0];
-        console.log(data.results[0]);
         
         generatedName.textContent = `First name : ${name.first}`;
         generatedLastName.textContent = `Last name : ${name.last}`;
@@ -25,4 +24,10 @@ function getRandomPerson(url : string) {
     })
 }
 
+// get new person
+generatePerson.addEventListener("click", ()=>{
+    getRandomPerson(url);
+});
+
+// call by default
 getRandomPerson(url);
