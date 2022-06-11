@@ -14,9 +14,14 @@ function getRandomPerson(url : string) {
 
         // destructuring data
         const {name, lastname, email, location, phone} = data.results[0];
+        console.log(data.results[0]);
         
-        generatedName.textContent = name.first;
-        
+        generatedName.textContent = `First name : ${name.first}`;
+        generatedLastName.textContent = `Last name : ${name.last}`;
+        generatedEmail.textContent = `Email : ${email}`;
+        genratedLocation.textContent = `Location : ${location.city}`;
+        generatedPhone.textContent = `Phone : ${phone}`;
+
     })
 }
 
