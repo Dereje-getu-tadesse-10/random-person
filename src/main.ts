@@ -19,8 +19,6 @@ function getAvatar(url : string) {
     })
 }
 
-
-
 // random person api
 const url : string = 'https://randomuser.me/api/';
 
