@@ -15,7 +15,7 @@
   \*********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://random-person/./src/main.ts?");
+eval("const generatedName = document.querySelector('.name');\nconst generatedLastName = document.querySelector('.last-name');\nconst generatedEmail = document.querySelector('.email');\nconst genratedLocation = document.querySelector('.location');\nconst generatedPhone = document.querySelector('.number-phone');\nconst url = 'https://randomuser.me/api/';\nfetch(url)\n    .then(response => response.json())\n    .then(data => {\n    console.log(data);\n});\n\n\n//# sourceURL=webpack://random-person/./src/main.ts?");
 
 /***/ })
 
